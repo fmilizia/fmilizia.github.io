@@ -1,0 +1,79 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+.grid-container{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 5% 5% auto;
+    grid-template-columns: 50% 20% auto;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-items: center;
+}
+
+.slidecontainer {
+    width: 90%;
+}
+.slider{
+    width: 100%;
+    height: 25px;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+.slider:hover{
+    opacity: 1;
+}
+#startButton, #undoButton, #redoButton{
+    width : 90%;
+    height: calc(100% - 10px);
+    text-align: center;
+    border-radius: 4px;
+}
+
+#historyContainer{
+    display: grid;
+    height: 100%;
+    width: 70%;
+    grid-template-rows: 100%;
+    grid-template-columns: 40% 20% auto 20%;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-items: center;
+}
+
+
+#svg{
+    grid-column: 1 / span 3;
+}
+
+.free-cell{
+    stroke : black;
+    stroke-width : 0.3;
+    fill : #B7950B;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+.free-cell:not(.killed-cell):hover{
+    opacity: 0.7;
+}
+.occupied-cell-A{
+    stroke : black;
+    stroke-width : 0.3;
+    fill : #1A5276;
+}
+.occupied-cell-B{
+    stroke : black;
+    stroke-width : 0.3;
+    fill : #A93226;
+}
+.corner-cell{
+    stroke : black;
+    stroke-width : 0.7;
+}
+.killed-cell{
+    opacity : 0.2;
+}

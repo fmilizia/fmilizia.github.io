@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+   <meta charset="UTF-8">
+   <title>Hex Game</title>
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="grid-container">
+        <div class="slidecontainer">
+            <input type="range" min="3" max="20" value="11" class="slider" id="sizeSlider">
+        </div>
+        <div>Size of the board: <span id="sizeValue"></span></div>
+        <button id="startButton" type="button">New game</button>
+        <div id="historyContainer">
+            <div>Game history:</div>
+            <button id="undoButton" type="button">Undo</button>
+            <div id="historyCount">0 / 0</div>
+            <button id="redoButton" type="button">Redo</button>
+        </div>
+        <svg id="svg" width=90% height=90% viewBox="-2 -2 178 104"/>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
