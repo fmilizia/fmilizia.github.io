@@ -1,21 +1,24 @@
 const svg = document.getElementById('svg');
-const slider = document.getElementById("sizeSlider");
+const increaseSizeButton = document.getElementById("increaseSizeButton");
+const decreaseSizeButton = document.getElementById("decreaseSizeButton");
 const sizeEl = document.getElementById("sizeValue");
 const startButton = document.getElementById("startButton");
 const undoButton = document.getElementById("undoButton");
 const redoButton = document.getElementById("redoButton");
 const historyCount = document.getElementById("historyCount");
 
-var N = 11;
+var new_N = 11;
+var N = 13;
 
 const cells = [];
 var n_moves = 0;
 const moves = [];
 var finished = false;
 
-sizeEl.innerHTML = slider.value;
-slider.oninput = function(){sizeEl.innerHTML = this.value;}
-startButton.onclick = function(){deleteGame(); N = slider.value + 2; initGame();}
+sizeEl.innerHTML = new_N;
+increaseSizeButton.onclick = function(){if(new_N < 20) new_N = new_N + 1; sizeEl.innerHTML = new_N;}
+decreaseSizeButton.onclick = function(){if(new_N > 3) new_N = new_N - 1; sizeEl.innerHTML = new_N;}
+startButton.onclick = function(){deleteGame(); N = new_N + 2; initGame();}
 undoButton.onclick = function(){undoMove();}
 redoButton.onclick = function(){redoMove();}
 
@@ -168,7 +171,7 @@ function deleteGame(){
     finished = false;
 }
 function initGame(){
-    N = parseInt(slider.value) + 2;
+    N = new_N + 2;
     for(let i=0; i<N; i++){
         let cell_line = [];
         for(let j=0; j<N; j++){

@@ -1,0 +1,64 @@
+body
+{
+  margin: 0;
+}
+
+header
+{ 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+  display: flex;
+  align-items: stretch;
+  
+  background-color: #333;
+}
+
+#header-title, #phantom-title
+{
+  margin: 5px 10px;
+  
+  color: white;
+  font-size: 1.5em;
+}
+
+.head-item
+{
+  padding: 0px 15px;
+  
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+header a
+{
+  text-decoration: none;
+}
+
+#navbar
+{
+  margin-left: auto;
+  
+  display: flex;
+  align-items: stretch;
+  flex-direction: row-reverse;
+}
+
+#navbar .active-page {
+  background-color: #04AA6D;
+}
+
+
+#main-img
+{
+  width: 100vw;
+  height: 30vw;
+  object-fit: cover;
+}
+
+#page-content
+{
+  padding: 2em;
+}
