@@ -53,7 +53,7 @@ header a
 
 #main-img
 {
-  width: 100vw;
+  width: 100%;
   height: 30vw;
   object-fit: cover;
 }
@@ -61,4 +61,10 @@ header a
 #page-content
 {
   padding: 2em;
+}
+
+@media (max-width: 1024px) {
+    header, #phantom-title {
+        font-size: 11px;
+    }
 }
