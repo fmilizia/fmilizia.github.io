@@ -7,6 +7,9 @@ const undoButton = document.getElementById("undoButton");
 const redoButton = document.getElementById("redoButton");
 const historyCount = document.getElementById("historyCount");
 
+
+var horizontal = true;
+
 var new_N = 11;
 var N = 13;
 
@@ -15,12 +18,16 @@ var n_moves = 0;
 const moves = [];
 var finished = false;
 
+
+
 sizeEl.innerHTML = new_N;
 increaseSizeButton.onclick = function(){if(new_N < 20) new_N = new_N + 1; sizeEl.innerHTML = new_N;}
 decreaseSizeButton.onclick = function(){if(new_N > 3) new_N = new_N - 1; sizeEl.innerHTML = new_N;}
 startButton.onclick = function(){deleteGame(); N = new_N + 2; initGame();}
 undoButton.onclick = function(){undoMove();}
 redoButton.onclick = function(){redoMove();}
+window.onresize = function(){decideOrientation();}
+
 
 
 function updatePlayerIndicator(){
@@ -182,6 +189,9 @@ function initGame(){
         cells.push(cell_line);
     }
     
+    svg.setAttribute("viewBox", "-2 -2 178 104");
+    decideOrientation();
+    
     for(let i=1; i<=N-1; i++) for(let j=1; j<=N-1; j++) svg.appendChild(cells[i][j].hexagon);
     for(let i=1; i<=N-1; i++){
         svg.appendChild(cells[0][i].hexagon);
@@ -196,6 +206,33 @@ function initGame(){
     
     updatePlayerIndicator();
     updateHistoryLine();
+}
+
+
+function decideOrientation(){
+    if(window.innerHeight < window.innerWidth) makeHorizontal();
+    else makeVertical();
+}
+
+function makeHorizontal(){
+    if(horizontal) return;
+    horizontal = true;
+    changeOrientation();
+    svg.setAttribute("viewBox", "-2 -2 178 104");
+}
+
+function makeVertical(){
+    if(!horizontal) return;
+    horizontal = false;
+    changeOrientation();
+    svg.setAttribute("viewBox", "-2 -2 104 178");
+}
+
+function changeOrientation(){
+    for(let i=0; i<=N-1; i++) for(let j=0; j<=N-1; j++){
+        for(let k=0; k<6; k++)
+            [cells[i][j].hexagon.points[k].x, cells[i][j].hexagon.points[k].y] = [cells[i][j].hexagon.points[k].y, cells[i][j].hexagon.points[k].x];
+    }
 }
 
 initGame();

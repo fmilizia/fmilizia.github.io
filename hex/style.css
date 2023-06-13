@@ -19,14 +19,11 @@
 
 #undoButton, #redoButton, #startButton
 {
-  color: white;
-  border: none;
   background-color: #04AA6D;
 }
 
 .sizeButton
 {
-  color: white;
   border: 5px solid #333;
   background-color: #B7950B;
 }
@@ -83,6 +80,14 @@ button:disabled {
 @media (max-width: 500px)
 {
   #historyCount
+  {
+    display: none !important;
+  }
+}
+
+@media (max-width: 400px)
+{
+  #redoButton
   {
     display: none !important;
   }
