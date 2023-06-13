@@ -34,7 +34,13 @@ header
 
 header a
 {
+  font-size: 1em;
   text-decoration: none;
+}
+
+header button
+{
+  font-size: 1em;
 }
 
 #navbar
@@ -46,7 +52,8 @@ header a
   flex-direction: row-reverse;
 }
 
-#navbar .active-page {
+#navbar .active-page
+{
   background-color: #04AA6D;
 }
 
@@ -64,7 +71,16 @@ header a
 }
 
 @media (max-width: 1024px) {
-    header, #phantom-title {
-        font-size: 11px;
+    #header-title, #phantom-title
+    {
+      font-size: 1em;
+    }
+    header, header a, header button
+    {
+      font-size: 0.8em;
+    }
+    .head-item
+    {
+      padding: 0px 10px;
     }
 }

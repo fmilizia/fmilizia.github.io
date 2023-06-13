@@ -20,7 +20,6 @@
 #undoButton, #redoButton, #startButton
 {
   color: white;
-  padding: 0px 15px;
   border: none;
   background-color: #04AA6D;
 }
@@ -28,7 +27,6 @@
 .sizeButton
 {
   color: white;
-  width: 3em;
   border: 5px solid #333;
   background-color: #B7950B;
 }
@@ -47,35 +45,45 @@ button:disabled {
   overflow-y: hidden;
 }
 
-#svg{
+#svg
+{
   flex-grow: 1;
   overflow-y: hidden;
 }
 
 .free-cell{
-    stroke : black;
-    stroke-width : 0.3;
-    fill : #B7950B;
-    opacity: 1;
-    transition: opacity 0.3s ease-out;
+  stroke : black;
+  stroke-width : 0.3;
+  fill : #B7950B;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
 }
 .free-cell:not(.killed-cell):hover{
-    opacity: 0.7;
+  opacity: 0.7;
 }
 .occupied-cell-A{
-    stroke : black;
-    stroke-width : 0.3;
-    fill : #1A5276;
+  stroke : black;
+  stroke-width : 0.3;
+  fill : #1A5276;
 }
 .occupied-cell-B{
-    stroke : black;
-    stroke-width : 0.3;
-    fill : #A93226;
+  stroke : black;
+  stroke-width : 0.3;
+  fill : #A93226;
 }
 .corner-cell{
-    stroke : black;
-    stroke-width : 0.7;
+  stroke : black;
+  stroke-width : 0.7;
 }
 .killed-cell{
-    opacity : 0.2;
+  opacity : 0.2;
+}
+
+
+@media (max-width: 500px)
+{
+  #historyCount
+  {
+    display: none !important;
+  }
 }
