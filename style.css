@@ -61,8 +61,13 @@ header
 
 #page-content
 {
-  padding: 32px;
+  padding: 20px;
 }
+
+#page-content li + li {
+  margin-top: 10px;
+}
+
 
 @media (max-width: 1024px) {
     #header-title, #phantom-title
