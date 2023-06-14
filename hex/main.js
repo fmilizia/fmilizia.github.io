@@ -189,6 +189,7 @@ function initGame(){
         cells.push(cell_line);
     }
     
+    horizontal = true;
     svg.setAttribute("viewBox", "-2 -2 178 104");
     decideOrientation();
     
