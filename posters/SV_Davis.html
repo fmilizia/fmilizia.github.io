@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Francesco Milizia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <link rel='stylesheet' href='../style.css'>
+    
+    <!-- Style for numbered list, from https://stackoverflow.com/a/60618241 -->
+    <style>
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+        
+        ol {
+            counter-reset: list;
+        }
+
+        ol > li {
+            list-style: none;
+            position: relative;
+        }
+
+        ol > li:before {
+            content: "[" counter(list) "]";
+            counter-increment: list;
+            left: -40px;
+            padding-right: 10px;
+            position: absolute;
+            text-align: right;
+            width: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id='header-title'>Francesco Milizia</h1>
+        <nav id='navbar'>
+            <a href='../index.html' id='home' class='head-item'>Home</a>
+            <a href='../research.html' id='research' class='head-item'>Research</a>
+            <a href='../other.html' id='other' class='head-item'>Other</a>
+        </nav>
+    </header>
+    <h1 id='phantom-title'>=)</h1>
+    
+    <div id='page-content'>
+        <h2>Simplicial spheres, maps between them, and the simplicial volume of Davis’ manifolds</h2>
+        Poster I am presenting at the workshop &ldquo;Combinatorial Algebraic Topology and Applications&rdquo;,
+        at Centro di Ricerca Matematica Ennio De Giorgi, in Pisa (27 November 2023).
+        
+        <h3>Abstract</h3>
+        The simplicial volume is a homotopy invariant of manifolds introduced by Gromov,
+        related to other invariants coming, for example, from differential geometry,
+        like the minimal volume. Gromov predicted a relation between the simplicial
+        volume and the Euler characteristic of aspherical manifolds; this has become
+        a central question in the mathematical community studying this invariant.
+        The poster describes an approach for the study of this conjecture for a class
+        of manifolds arising from a construction by M. Davis. This approach leads to
+        the study of certain triangulated spheres and simplicial maps between them,
+        and the poster focuses mostly on this &ldquo;combinatorial component&rdquo; of the approach.
+        
+        <h3>Digital copy of the poster</h3>
+        I will put it here after the event has taken place.
+        
+        <h3>References</h3>
+        <ol>
+        <li> M. W. Davis,
+             &ldquo;The Geometry and Topology of Coxeter Groups&rdquo;,
+             London Mathematical Society Monographs, vol. 32,
+             Princeton University Press, Princeton, NJ, 2007.</li>
+        <li> M. W. Davis and B. Okun,
+             <em>Vanishing theorems and conjectures for the &ell;&sup2;-homology of right-angled Coxeter groups</em>,
+             Algebr. Geom. Topol. <b>5</b> (2001), 7&ndash;74.</li>
+        <li> N. Robertson and P. D. Seymour,
+             <em>Graph minors. XX. Wagner's conjecture</em>,
+             J. Combin. Theory Ser. B <b>92</b> (2004), 325&ndash;357.</li>
+        <li> L. Venturello, <em>On flag spheres with few equators</em>, 2022. Arxiv preprint.</li>
+        <li> S. Weinberger, &ldquo;Computers, Rigidity, and Moduli&rdquo;,
+             Porter Lectures,
+             Princeton University Press, Princeton, NJ, 2005.</li>
+        </ol>
+    </div>
+    
+</body>
