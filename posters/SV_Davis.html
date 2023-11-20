@@ -5,22 +5,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     <link rel='stylesheet' href='../style.css'>
     
-    <!-- Style for numbered list, from https://stackoverflow.com/a/60618241 -->
     <style>
-        *, ::after, ::before {
-            box-sizing: border-box;
-        }
-        
-        ol {
+        .biblist {
             counter-reset: list;
         }
-
-        ol > li {
+        
+        .biblist > li {
             list-style: none;
             position: relative;
         }
-
-        ol > li:before {
+        
+        .biblist > li::before {
+            box-sizing: border-box;
             content: "[" counter(list) "]";
             counter-increment: list;
             left: -40px;
@@ -28,6 +24,13 @@
             position: absolute;
             text-align: right;
             width: 40px;
+        }
+        
+        a.doi{
+            content: url('../images/globe.svg');
+            height: .9em;
+            width: .9em;
+            margin-left: .3em;
         }
     </style>
 </head>
@@ -44,11 +47,11 @@
     <h1 id='phantom-title'>=)</h1>
     
     <div id='page-content'>
-        <h2>Simplicial spheres, maps between them, and the simplicial volume of Davis’ manifolds</h2>
+        <h1>Simplicial spheres, maps between them, and the simplicial volume of Davis’ manifolds</h1>
         Poster I am presenting at the workshop &ldquo;Combinatorial Algebraic Topology and Applications&rdquo;,
         at Centro di Ricerca Matematica Ennio De Giorgi, in Pisa (27 November 2023).
         
-        <h3>Abstract</h3>
+        <h2>Abstract</h2>
         The simplicial volume is a homotopy invariant of manifolds introduced by Gromov,
         related to other invariants coming, for example, from differential geometry,
         like the minimal volume. Gromov predicted a relation between the simplicial
@@ -59,26 +62,50 @@
         the study of certain triangulated spheres and simplicial maps between them,
         and the poster focuses mostly on this &ldquo;combinatorial component&rdquo; of the approach.
         
-        <h3>Digital copy of the poster</h3>
+        <h2>Digital copy of the poster</h2>
         I will put it here after the event has taken place.
         
-        <h3>References</h3>
-        <ol>
+        <h2>Where to find some related material</h2>
+        <p><b>Flag spheres and Davis' construction.</b>
+          For a description of Davis' construction (which is more general than what appears in the poster), look up Davis' book [1].
+          The theorem by Davis and Okun about the positivity of &gamma; for flag 3-spheres is proved in [2].
+          The flag 3-sphere with 12 vertices that happens to be a minimal element of the poset considered in the poster is described in [5].</li>
+        </p>
+        <p><b>Simplicial volume.</b>
+          For an introduction to simplicial volume, you can see [3].
+          In [6] there is a proof of the fact that the vanishing of the simplicial volume of a triangulated manifold cannot be decided algorithmically.
+        </p>
+        <p><b>Graph minors.</b>
+          The graph minor theorem is proved in [4].
+        </p>
+        
+        <ol class='biblist'>
         <li> M. W. Davis,
              &ldquo;The Geometry and Topology of Coxeter Groups&rdquo;,
              London Mathematical Society Monographs, vol. 32,
-             Princeton University Press, Princeton, NJ, 2007.</li>
+             Princeton University Press, Princeton, NJ, 2007.
+             <a class='doi' href='https://doi.org/10.1515/9781400845941' target='_blank'></a></li>
         <li> M. W. Davis and B. Okun,
              <em>Vanishing theorems and conjectures for the &ell;&sup2;-homology of right-angled Coxeter groups</em>,
-             Algebr. Geom. Topol. <b>5</b> (2001), 7&ndash;74.</li>
+             Algebr. Geom. Topol. <b>5</b> (2001), 7&ndash;74.
+             <a class='doi' href='http://dx.doi.org/10.2140/gt.2001.5.7' target='_blank'></a></li>
+        <li> R. Frigerio,
+             &ldquo;Bounded Cohomology of Discrete Groups&rdquo;,
+             Mathematical Surveys and Monographs, vol. 227,
+             American Mathematical Society, Providence, RI, 2017.
+             <a class='doi' href='https://doi.org/10.1090/surv/227' target='_blank'></a></li>
         <li> N. Robertson and P. D. Seymour,
              <em>Graph minors. XX. Wagner's conjecture</em>,
-             J. Combin. Theory Ser. B <b>92</b> (2004), 325&ndash;357.</li>
-        <li> L. Venturello, <em>On flag spheres with few equators</em>, 2022. Arxiv preprint.</li>
+             J. Combin. Theory Ser. B <b>92</b> (2004), 325&ndash;357.
+             <a class='doi' href='https://doi.org/10.1016/j.jctb.2004.08.001' target='_blank'></a></li>
+        <li> L. Venturello, <em>On flag spheres with few equators</em>, 2022. Arxiv preprint.
+             <a class='doi' href='https://doi.org/10.48550/arXiv.2203.10003' target='_blank'></a></li>
         <li> S. Weinberger, &ldquo;Computers, Rigidity, and Moduli&rdquo;,
              Porter Lectures,
-             Princeton University Press, Princeton, NJ, 2005.</li>
+             Princeton University Press, Princeton, NJ, 2005.
+             <a class='doi' href='https://doi.org/10.1515/9780691222462' target='_blank'></a></li>
         </ol>
+        
     </div>
     
 </body>
