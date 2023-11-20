@@ -4,35 +4,8 @@
     <title>Francesco Milizia</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     <link rel='stylesheet' href='../style.css'>
-    
-    <style>
-        .biblist {
-            counter-reset: list;
-        }
-        
-        .biblist > li {
-            list-style: none;
-            position: relative;
-        }
-        
-        .biblist > li::before {
-            box-sizing: border-box;
-            content: "[" counter(list) "]";
-            counter-increment: list;
-            left: -40px;
-            padding-right: 10px;
-            position: absolute;
-            text-align: right;
-            width: 40px;
-        }
-        
-        a.doi{
-            content: url('../images/globe.svg');
-            height: .9em;
-            width: .9em;
-            margin-left: .3em;
-        }
-    </style>
+    <link rel='stylesheet' href='../collapsible.css'>
+    <link rel='stylesheet' href='style.css'>
 </head>
 
 <body>
@@ -48,10 +21,11 @@
     
     <div id='page-content'>
         <h1>Simplicial spheres, maps between them, and the simplicial volume of Davis’ manifolds</h1>
-        Poster I am presenting at the workshop &ldquo;Combinatorial Algebraic Topology and Applications&rdquo;,
-        at Centro di Ricerca Matematica Ennio De Giorgi, in Pisa (27 November 2023).
+        <p>Poster I am presenting at the workshop &ldquo;Combinatorial Algebraic Topology and Applications&rdquo;,
+        at Centro di Ricerca Matematica Ennio De Giorgi, in Pisa (27 November 2023).</p>
         
-        <h2>Abstract</h2>
+        <button class='collapsible' style="font-size:1.17em;"><b>Abstract</b></button>
+        <div class='collapsible-content'><p>
         The simplicial volume is a homotopy invariant of manifolds introduced by Gromov,
         related to other invariants coming, for example, from differential geometry,
         like the minimal volume. Gromov predicted a relation between the simplicial
@@ -61,24 +35,29 @@
         of manifolds arising from a construction by M. Davis. This approach leads to
         the study of certain triangulated spheres and simplicial maps between them,
         and the poster focuses mostly on this &ldquo;combinatorial component&rdquo; of the approach.
+        </p></div>
         
-        <h2>Digital copy of the poster</h2>
-        I will put it here after the event has taken place.
+        <p>
+        <b>Digital copy of the poster:</b>
+        I will put it here when the day of the event arrives.
+        </p>
         
-        <h2>Where to find some related material</h2>
+        <button class='collapsible' style="font-size:1.17em;"><b>Relevant mathematical literature</b></button>
+        <div class='collapsible-content'>
         <p><b>Flag spheres and Davis' construction.</b>
           For a description of Davis' construction (which is more general than what appears in the poster), look up Davis' book [1].
           The theorem by Davis and Okun about the positivity of &gamma; for flag 3-spheres is proved in [2].
           The flag 3-sphere with 12 vertices that happens to be a minimal element of the poset considered in the poster is described in [5].</li>
         </p>
         <p><b>Simplicial volume.</b>
-          For an introduction to simplicial volume, you can see [3].
+          For an introduction to simplicial volume, see [3].
           In [6] there is a proof of the fact that the vanishing of the simplicial volume of a triangulated manifold cannot be decided algorithmically.
         </p>
         <p><b>Graph minors.</b>
           The graph minor theorem is proved in [4].
         </p>
         
+        <h2>References</h2>
         <ol class='biblist'>
         <li> M. W. Davis,
              &ldquo;The Geometry and Topology of Coxeter Groups&rdquo;,
@@ -88,7 +67,7 @@
         <li> M. W. Davis and B. Okun,
              <em>Vanishing theorems and conjectures for the &ell;&sup2;-homology of right-angled Coxeter groups</em>,
              Algebr. Geom. Topol. <b>5</b> (2001), 7&ndash;74.
-             <a class='doi' href='http://dx.doi.org/10.2140/gt.2001.5.7' target='_blank'></a></li>
+             <a class='doi' href='https://doi.org/10.2140/gt.2001.5.7' target='_blank'></a></li>
         <li> R. Frigerio,
              &ldquo;Bounded Cohomology of Discrete Groups&rdquo;,
              Mathematical Surveys and Monographs, vol. 227,
@@ -105,7 +84,8 @@
              Princeton University Press, Princeton, NJ, 2005.
              <a class='doi' href='https://doi.org/10.1515/9780691222462' target='_blank'></a></li>
         </ol>
-        
+        </div>
     </div>
     
+    <script src='../collapsible.js'></script>
 </body>
