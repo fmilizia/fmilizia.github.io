@@ -31,9 +31,18 @@ a.doi
     margin-left: .3em;
 }
 
+.pdf-ico
+{
+    height: 2em;
+    width: 2em;
+    vertical-align: middle;
+    margin-left: 1em;
+}
+
 
 .collapsible
 {
+    font-size: 1.17em;
     background-color: #777;
 }
 
