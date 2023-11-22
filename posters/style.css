@@ -1,48 +1,5 @@
-/* For bibliographic entries */
-
-.biblist
-{
-    counter-reset: list;
-}
-
-.biblist > li
-{
-    list-style: none;
-    position: relative;
-}
-
-.biblist > li::before
-{
-    box-sizing: border-box;
-    content: "[" counter(list) "]";
-    counter-increment: list;
-    left: -40px;
-    padding-right: 10px;
-    position: absolute;
-    text-align: right;
-    width: 40px;
-}
-
-a.doi
-{
-    content: url('../images/globe.svg');
-    height: .9em;
-    width: .9em;
-    margin-left: .3em;
-}
-
-.pdf-ico
-{
-    height: 2em;
-    width: 2em;
-    vertical-align: middle;
-    margin-left: 1em;
-}
-
-
 .collapsible
 {
-    font-size: 1.17em;
     background-color: #777;
 }
 

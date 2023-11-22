@@ -4,6 +4,8 @@
     <title>Francesco Milizia</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' href='accessories/collapsible.css'>
+    <link rel='stylesheet' href='accessories/accessories.css'>
 </head>
 
 <body>
@@ -19,25 +21,30 @@
     
     <div id='page-content'>
         <h2>Papers</h2>
-        <ul>
+        <ol class='biblist reversed' style='counter-reset: list 5;'>
         <li><em>Bounded differential forms and coinvariants of bounded functions</em>,
-            <a href='https://arxiv.org/abs/2311.07731' target='_blank'>arXiv</a>.</li>
+          arXiv preprint (2023).
+          <a class='doi' href='https://doi.org/10.48550/arXiv.2311.07731' target='_blank'></a></li>
         <li>(with Giuseppe Bargagnati, Federica Bertolotti and Pietro Capovilla) <em>The action of mapping class groups on de Rham quasimorphisms</em>,
-            <a href='https://arxiv.org/abs/2311.07728' target='_blank'>arXiv</a>.</li>
+          arXiv preprint (2023).
+          <a class='doi' href='https://doi.org/10.48550/arXiv.2311.07728' target='_blank'></a></li>
         <li>(with Dario Ascari) <em>Weakly bounded cohomology classes and a counterexample to a conjecture of Gromov</em>,
-            <a href='https://arxiv.org/abs/2207.03972' target='_blank'>arXiv</a>.</li>
+          arXiv preprint (2022).
+          <a class='doi' href='https://doi.org/10.48550/arXiv.2207.03972' target='_blank'></a></li>
         <li><em>&ell;<sup>&infin;</sup>-cohomology: amenability, relative hyperbolicity, isoperimetric inequalities and undecidability</em>,
-            <a href='https://arxiv.org/abs/2107.09089' target='_blank'>arXiv</a>.</li>
-        </ul>
+          arXiv preprint (2021).
+          <a class='doi' href='https://doi.org/10.48550/arXiv.2107.09089' target='_blank'></a></li>
+        </ol>
         
         <h2>Posters</h2>
         <ul>
         <li><a href='posters/SV_Davis.html'><em>Simplicial spheres, maps between them, and the simplicial volume of Davis’ manifolds</em></a>,
-            Combinatorial Algebraic Topology and Applications, Centro di Ricerca Matematica Ennio De Giorgi, November 2023.</li>
+          Combinatorial Algebraic Topology and Applications, Centro di Ricerca Matematica Ennio De Giorgi, November 2023.</li>
         </ul>
         
-        <h2>Talks</h2>
-        <ul>
+        <button class='collapsible'>Talks</button>
+          <div class='collapsible-content'>
+          <ul>
             <li><em>Simplicial volume and the reflection trick</em>,
                 Manifolds and groups in Bologna, Università di Bologna, March 2023.</li>
             <li><em>Minimal Volume</em>,
@@ -54,10 +61,11 @@
                 Seminario dei Baby Geometri, Università di Pisa, May 2021.</li>
             <li><em>Disuguaglianza di Milnor-Wood e rappresentazioni massimali</em>,
                 Colloquio del quarto anno, Scuola Normale Superiore, Pisa, April 2019.</li>
-        </ul>
+          </ul>
+        </div>
         
-        <h2>Conferences attended</h2>
-        <ul>
+        <button class='collapsible' style='font-size: 1.5em;'>Conferences I attended</button>
+          <div class='collapsible-content'><ul>
             <li>Combinatorial Algebraic Topology and Applications, Pisa, November 2023.</li>
             <li>Leaning Into Topology, Pisa, September 2023.</li>
             <li>GRAZP: Groups and Rigidity Around the Zimmer Program, Ventotene, September 2023.</li>
@@ -75,7 +83,10 @@
             <li>Young Geometric Group Theory X, online, July 2021.</li>
             <li>Trisections and the Thom Conjecture, Matemale, May 2021.</li>
             <li>Simplicial volumes and bounded cohomology, online, September 2020.</li>
-        </ul>
+          </ul>
+        </div>
+        
     </div>
     
+    <script src='accessories/collapsible.js'></script>
 </body>
