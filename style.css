@@ -20,8 +20,10 @@ header
 {
   margin: 5px 10px;
   
-  color: white;
   font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
 
 .head-item
