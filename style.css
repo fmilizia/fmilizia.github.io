@@ -71,11 +71,17 @@ header
   margin-top: 10px;
 }
 
+
 .inline-title {
-  font-weight: bold;
-  color: #2c3e50;
-  margin-right: 0.5em;
-}
+      display: inline-block;
+      font-weight: 600;
+      font-size: 0.9em;
+      background-color: #3498db;
+      color: white;
+      padding: 0.2em 0.6em;
+      border-radius: 8px;
+      margin-right: 0.6em;
+    }
 
 
 @media (max-width: 1024px) {
