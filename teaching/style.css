@@ -1,0 +1,14 @@
+.collapsible
+{
+    background-color: #777;
+}
+
+.collapsible.active, .collapsible:hover
+{
+    background-color: #555;
+}
+
+.collapsible-content
+{
+    background-color: #f1f1f1;
+}
