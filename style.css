@@ -12,6 +12,7 @@ header
   
   display: flex;
   align-items: stretch;
+  z-index: 9999;
   
   background-color: #333;
 }
